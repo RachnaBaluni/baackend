@@ -16,12 +16,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: [
-      "https://frontendfinal-olive.vercel.app",
-      "https://frontendone-swart.vercel.app",
-      "http://localhost:5173",
-      "http://localhost:5174",
-    ],
+    origin: "https://frontendfinal-rilz2dzuh-rachnabalunis-projects.vercel.app",
     credentials: true,
   })
 );
