@@ -16,7 +16,10 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://frontendfinal-rilz2dzuh-rachnabalunis-projects.vercel.app",
+    origin: [
+      "https://frontendfinal-rilz2dzuh-rachnabalunis-projects.vercel.app",
+      "https://frontendfinal-olive.vercel.app"
+    ],
     credentials: true,
   })
 );

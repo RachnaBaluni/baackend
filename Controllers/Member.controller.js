@@ -19,11 +19,11 @@ const login = async (req, res) => {
     const result = await MemberServices.Login({ type, identifier, password });
 
     res.cookie("token", result.token, {
-      httpOnly: true,
-      secure: false,
-      maxAge: 24 * 60 * 60 * 1000,
-      sameSite: "Lax",
-    });
+  httpOnly: true,
+  secure: false,
+  maxAge: 24 * 60 * 60 * 1000,
+  sameSite: "Lax",
+});
     return res.status(200).json({
       success: result.success,
       message: result.message,
