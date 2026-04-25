@@ -25,12 +25,12 @@ const adminLogin = async (req, res) => {
     );
 
     res.cookie("token", token, {
-      httpOnly: true,
-      secure: true,
-      sameSite: "none",
-      path: "/",
-      maxAge: 1000 * 60 * 60,
-    });
+  httpOnly: true,
+  secure: false,   // ⚠️ CHANGE THIS
+  sameSite: "Lax", // ⚠️ CHANGE THIS
+  path: "/",
+  maxAge: 1000 * 60 * 60,
+});
 
     return res.status(200).json({
       success: true,
